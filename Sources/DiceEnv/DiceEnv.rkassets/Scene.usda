@@ -10,21 +10,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["D20_temp", "rainbow", "rainbow_1", "CellShader", "CellShader_1", "HalfTone"]
-    def "D20_temp" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        references = @D20_temp.usdz@
-    )
-    {
-        rel material:binding = </Root/Material> (
-            bindMaterialAs = "weakerThanDescendants"
-        )
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0.82372534, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
+    reorder nameChildren = ["rainbow", "rainbow_1", "CellShader", "CellShader_1", "Clouds", "D20_temp_beveled"]
     def Material "rainbow"
     {
         reorder nameChildren = ["UnlitSurface", "ColorMap"]
@@ -848,22 +834,11 @@ def Xform "Root"
         }
     }
 
-    def Material "Material"
+    def Material "Clouds"
     {
-        token outputs:mtlx:surface.connect = </Root/Material/PreviewSurface.outputs:out>
+        token outputs:mtlx:surface.connect = </Root/Clouds/PBRSurface.outputs:out>
         token outputs:realitykit:vertex
         float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (335.25, 100.5)
-
-        def Shader "PreviewSurface"
-        {
-            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
-            color3f inputs:diffuseColor.connect = </Root/Material/Mix.outputs:out>
-            float inputs:metallic
-            float inputs:roughness
-            token outputs:out
-            float2 ui:nodegraph:node:pos = (66.62891, 58.48047)
-            int ui:nodegraph:node:stackingOrder = 6
-        }
 
         def Shader "Fractal3D"
         {
@@ -871,7 +846,7 @@ def Xform "Root"
             float inputs:diminish
             float inputs:lacunarity = 3
             int inputs:octaves = 6
-            float3 inputs:position.connect = </Root/Material/Add.outputs:out>
+            float3 inputs:position.connect = </Root/Clouds/Add.outputs:out>
             float outputs:out
             float2 ui:nodegraph:node:pos = (-710.70154, -37.023285)
             int ui:nodegraph:node:stackingOrder = 222
@@ -887,20 +862,20 @@ def Xform "Root"
                 colorSpace = "srgb_displayp3"
             )
             float inputs:mix = 0.5
-            float inputs:mix.connect = </Root/Material/Abs.outputs:out>
+            float inputs:mix.connect = </Root/Clouds/Abs.outputs:out>
             color3f outputs:out
-            float2 ui:nodegraph:node:pos = (-163.32422, -30.53125)
-            int ui:nodegraph:node:stackingOrder = 95
+            float2 ui:nodegraph:node:pos = (-231.51562, -77.74219)
+            int ui:nodegraph:node:stackingOrder = 230
             string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
         }
 
         def Shader "Abs"
         {
             uniform token info:id = "ND_absval_float"
-            float inputs:in.connect = </Root/Material/Multiply_1.outputs:out>
+            float inputs:in.connect = </Root/Clouds/Multiply_1.outputs:out>
             float outputs:out
-            float2 ui:nodegraph:node:pos = (-335.73438, -46.578125)
-            int ui:nodegraph:node:stackingOrder = 102
+            float2 ui:nodegraph:node:pos = (-376.0547, -46.910156)
+            int ui:nodegraph:node:stackingOrder = 228
         }
 
         def Shader "Time"
@@ -922,8 +897,8 @@ def Xform "Root"
         def Shader "Add"
         {
             uniform token info:id = "ND_add_vector3FA"
-            prepend float3 inputs:in1.connect = </Root/Material/Position.outputs:out>
-            float inputs:in2.connect = </Root/Material/Multiply.outputs:out>
+            float3 inputs:in1.connect = </Root/Clouds/Position.outputs:out>
+            float inputs:in2.connect = </Root/Clouds/Multiply.outputs:out>
             float3 outputs:out
             float2 ui:nodegraph:node:pos = (-940.29297, 11.550781)
             int ui:nodegraph:node:stackingOrder = 72
@@ -932,7 +907,7 @@ def Xform "Root"
         def Shader "Multiply"
         {
             uniform token info:id = "ND_multiply_float"
-            float inputs:in1.connect = </Root/Material/Time.outputs:out>
+            float inputs:in1.connect = </Root/Clouds/Time.outputs:out>
             float inputs:in2 = 0.1
             float outputs:out
             float2 ui:nodegraph:node:pos = (-1131.748, 22.534328)
@@ -945,7 +920,7 @@ def Xform "Root"
             float inputs:diminish
             float inputs:lacunarity = 3
             int inputs:octaves = 6
-            float3 inputs:position.connect = </Root/Material/Add_1.outputs:out>
+            float3 inputs:position.connect = </Root/Clouds/Add_1.outputs:out>
             float outputs:out
             float2 ui:nodegraph:node:pos = (-712.1822, -242.56276)
             int ui:nodegraph:node:stackingOrder = 222
@@ -954,8 +929,8 @@ def Xform "Root"
         def Shader "Multiply_1"
         {
             uniform token info:id = "ND_multiply_float"
-            float inputs:in1.connect = </Root/Material/Fractal3D_1.outputs:out>
-            float inputs:in2.connect = </Root/Material/Fractal3D.outputs:out>
+            float inputs:in1.connect = </Root/Clouds/Fractal3D_1.outputs:out>
+            float inputs:in2.connect = </Root/Clouds/Fractal3D.outputs:out>
             float outputs:out
             float2 ui:nodegraph:node:pos = (-492.4375, -46.96875)
             int ui:nodegraph:node:stackingOrder = 137
@@ -964,7 +939,7 @@ def Xform "Root"
         def Shader "Multiply_2"
         {
             uniform token info:id = "ND_multiply_vector3"
-            float3 inputs:in1.connect = </Root/Material/Position.outputs:out>
+            float3 inputs:in1.connect = </Root/Clouds/Position.outputs:out>
             float3 inputs:in2.connect = None
             float3 outputs:out
             float2 ui:nodegraph:node:pos = (-1012.85156, -166.3164)
@@ -974,8 +949,8 @@ def Xform "Root"
         def Shader "Add_1"
         {
             uniform token info:id = "ND_add_vector3FA"
-            prepend float3 inputs:in1.connect = </Root/Material/Multiply_2.outputs:out>
-            float inputs:in2.connect = </Root/Material/Multiply_3.outputs:out>
+            float3 inputs:in1.connect = </Root/Clouds/Multiply_2.outputs:out>
+            float inputs:in2.connect = </Root/Clouds/Multiply_3.outputs:out>
             float3 outputs:out
             float2 ui:nodegraph:node:pos = (-896.71094, -156.64453)
             int ui:nodegraph:node:stackingOrder = 123
@@ -984,13 +959,105 @@ def Xform "Root"
         def Shader "Multiply_3"
         {
             uniform token info:id = "ND_multiply_float"
-            float inputs:in1.connect = </Root/Material/Multiply.outputs:out>
+            float inputs:in1.connect = </Root/Clouds/Multiply.outputs:out>
             float inputs:in2 = 0.5
             float inputs:in2.connect = None
             float outputs:out
             float2 ui:nodegraph:node:pos = (-1010.3113, -81.39335)
             int ui:nodegraph:node:stackingOrder = 224
         }
+
+        def Shader "Image"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @D20_Assets/D20_SteelDark_emissive.jpg@
+            string inputs:filtertype
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-420.55228, 193.9742)
+            int ui:nodegraph:node:stackingOrder = 262
+        }
+
+        def Shader "Add_2"
+        {
+            uniform token info:id = "ND_add_color3FA"
+            prepend color3f inputs:in1.connect = </Root/Clouds/Mix.outputs:out>
+            float inputs:in2.connect = </Root/Clouds/Image.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-94.44429, 62.730732)
+            int ui:nodegraph:node:stackingOrder = 259
+        }
+
+        def Shader "PBRSurface"
+        {
+            uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+            color3f inputs:baseColor.connect = </Root/Clouds/Add_2.outputs:out>
+            float3 inputs:clearcoatNormal
+            color3f inputs:emissiveColor
+            bool inputs:hasPremultipliedAlpha
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (82.38587, 157.18704)
+            int ui:nodegraph:node:stackingOrder = 252
+        }
+    }
+
+    def "D20" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        prepend references = @D20.usdz@
+    )
+    {
+        rel material:binding = </Root/Clouds> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "D12" (
+        active = true
+        prepend references = @D12.usdz@
+    )
+    {
+        float3 xformOp:translate = (0, 0, -2.203426)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "D10" (
+        active = true
+        prepend references = @D10.usdz@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:translate = (0, -0.018819570541381836, -4.558541297912598)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "D08" (
+        active = true
+        prepend references = @D08.usdz@
+    )
+    {
+        float3 xformOp:translate = (0, 0, -7.0194764)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "D06" (
+        active = true
+        prepend references = @D06.usdz@
+    )
+    {
+        float3 xformOp:translate = (0, 0, -9.024239)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "D04" (
+        active = true
+        prepend references = @D04.usdz@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:translate = (0, 0, -10.565242767333984)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }
 
