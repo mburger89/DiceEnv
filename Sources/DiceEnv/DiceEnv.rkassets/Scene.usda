@@ -12,7 +12,7 @@ reorder rootPrims = ["Root", "GoldenDroid_D04"]
 
 def Xform "Root"
 {
-    reorder nameChildren = ["TestSkins", "Dice", "PaintedWorn", "Sapphire", "SteelDarkAged", "Clouds", "BlueEdge", "GoldenDroid", "DarkMarble"]
+    reorder nameChildren = ["TestSkins", "Dice", "PaintedWorn", "Sapphire", "SteelDarkAged", "Clouds", "BlueEdge", "diceTray_fabricWoolHerringbone", "TraySkins", "DiceCover_glassDirty", "Capsule", "GoldenDroid", "DarkMarble"]
     def Xform "TestSkins" (
         active = true
     )
@@ -4153,6 +4153,128 @@ def Xform "Root"
                 string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
             }
         }
+    }
+
+    def "diceTray_fabricWoolHerringbone" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @diceTray_fabricWoolHerringbone.usdz@
+    )
+    {
+        rel material:binding = </Root/TraySkins/woodAcajou_tray> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Xform "TraySkins" (
+        active = true
+    )
+    {
+        def Material "woodAcajou_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/woodAcajou_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = </Root/TraySkins/woodAcajou_tray/UsdPreviewSurface.outputs:surface>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/woodAcajou_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/woodAcajou_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/woodAcajou_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/woodAcajou_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/woodAcajou_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 63
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 65
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 61
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 59
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 75
+            }
+        }
+    }
+
+    def "DiceCover_glassDirty" (
+        active = true
+        references = @DiceCover_glassDirty.usdz@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }
 
