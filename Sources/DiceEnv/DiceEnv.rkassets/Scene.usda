@@ -28,8 +28,8 @@ def Xform "Root"
             def NodeGraph "ColorMap"
             {
                 color3f outputs:Combine3_out.connect = </Root/TestSkins/rainbow/ColorMap/Combine3.outputs:out>
-                float2 ui:nodegraph:node:pos = (-210.42508, -68.494896)
-                int ui:nodegraph:node:stackingOrder = 1170
+                float2 ui:nodegraph:node:pos = (-337.84988, -41.935287)
+                int ui:nodegraph:node:stackingOrder = 1173
                 string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:Combine3_out"]
                 float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1210.75, 91.5)
 
@@ -98,10 +98,9 @@ def Xform "Root"
                 color3f inputs:emissiveColor = (0, 0, 0) (
                     colorSpace = "lin_srgb"
                 )
-                color3f inputs:emissiveColor.connect = </Root/TestSkins/rainbow/image_1.outputs:out>
                 bool inputs:hasPremultipliedAlpha
                 float inputs:metallic.connect = None
-                float3 inputs:normal.connect = </Root/TestSkins/rainbow/image.outputs:out>
+                float3 inputs:normal
                 float inputs:opacity
                 float inputs:roughness = 1
                 float inputs:specular
@@ -109,34 +108,6 @@ def Xform "Root"
                 float2 ui:nodegraph:node:pos = (-6.6865435, 118.469025)
                 int ui:nodegraph:node:stackingOrder = 1164
                 string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:emissiveColor"]
-            }
-
-            def Shader "image"
-            {
-                uniform token info:id = "ND_image_vector3"
-                float3 inputs:default = (0, 0, 0)
-                asset inputs:file = @D20_SteelDark_normal.png@
-                string inputs:filtertype
-                string inputs:uaddressmode = "periodic"
-                string inputs:vaddressmode = "periodic"
-                float3 outputs:out
-                float2 ui:nodegraph:node:pos = (-385.61945, 277.2202)
-                int ui:nodegraph:node:stackingOrder = 1154
-                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
-            }
-
-            def Shader "image_1"
-            {
-                uniform token info:id = "ND_image_color3"
-                color3f inputs:default = (1, 1, 1) (
-                    colorSpace = "lin_srgb"
-                )
-                asset inputs:file = @D20_SteelDark_emissive.jpg@
-                string inputs:filtertype
-                string inputs:vaddressmode
-                color3f outputs:out
-                float2 ui:nodegraph:node:pos = (-382.39288, -143.77585)
-                int ui:nodegraph:node:stackingOrder = 1166
             }
         }
 
@@ -215,8 +186,8 @@ def Xform "Root"
                 float inputs:Range_in.connect = </Root/TestSkins/rainbow1_D20/Separate3.outputs:outz>
                 float outputs:SmoothStep_out.connect = </Root/TestSkins/rainbow1_D20/nodegraph/SmoothStep.outputs:out>
                 float2 ui:nodegraph:node:pos = (-634.8731, -213.41832)
-                int ui:nodegraph:node:stackingOrder = 1082
-                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:Range_in", "outputs:SmoothStep_out", "inputs:Range_in"]
+                int ui:nodegraph:node:stackingOrder = 1118
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:Range_in", "outputs:SmoothStep_out", "inputs:Range_in", "inputs:Range_in"]
                 float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (634.75, 109.5)
 
                 def Shader "SmoothStep"
@@ -340,10 +311,10 @@ def Xform "Root"
                 float inputs:clearcoat
                 float3 inputs:clearcoatNormal
                 float inputs:clearcoatRoughness
-                color3f inputs:emissiveColor.connect = </Root/TestSkins/rainbow1_D20/image_1.outputs:out>
+                color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
                 float inputs:metallic
-                float3 inputs:normal.connect = </Root/TestSkins/rainbow1_D20/image.outputs:out>
+                float3 inputs:normal
                 float inputs:opacity
                 float inputs:opacityThreshold
                 float inputs:roughness = 1
@@ -351,32 +322,6 @@ def Xform "Root"
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (-81.53121, 256.84128)
                 int ui:nodegraph:node:stackingOrder = 1081
-            }
-
-            def Shader "image"
-            {
-                uniform token info:id = "ND_image_vector3"
-                asset inputs:file = @D20_SteelDark_normal 1.png@
-                string inputs:filtertype
-                string inputs:vaddressmode
-                float3 outputs:out
-                float2 ui:nodegraph:node:pos = (-591.6773, 713.26917)
-                int ui:nodegraph:node:stackingOrder = 1118
-                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
-            }
-
-            def Shader "image_1"
-            {
-                uniform token info:id = "ND_image_color3"
-                color3f inputs:default = (1, 1, 1) (
-                    colorSpace = "lin_srgb"
-                )
-                asset inputs:file = @D20_SteelDark_emissive.jpg@
-                string inputs:filtertype
-                string inputs:vaddressmode
-                color3f outputs:out
-                float2 ui:nodegraph:node:pos = (-592.60834, 294.2955)
-                int ui:nodegraph:node:stackingOrder = 1121
             }
         }
 
@@ -410,15 +355,6 @@ def Xform "Root"
                 int ui:nodegraph:node:stackingOrder = 373
             }
 
-            def Shader "NormalsWorldSpace"
-            {
-                uniform token info:id = "ND_normal_vector3"
-                string inputs:space = "world"
-                float3 outputs:out
-                float2 ui:nodegraph:node:pos = (-1259.5157, 0.7650965)
-                int ui:nodegraph:node:stackingOrder = 1070
-            }
-
             def Shader "DotProduct"
             {
                 uniform token info:id = "ND_dotproduct_vector3"
@@ -442,7 +378,7 @@ def Xform "Root"
             def Shader "NormalizeNormals"
             {
                 uniform token info:id = "ND_normalize_vector3"
-                float3 inputs:in.connect = </Root/TestSkins/CellShader_D20/Normals.outputs:NormalMap_out>
+                float3 inputs:in
                 float3 outputs:out
                 float2 ui:nodegraph:node:pos = (-691.3672, 92.984375)
                 int ui:nodegraph:node:stackingOrder = 373
@@ -498,8 +434,8 @@ def Xform "Root"
                     colorSpace = "srgb_texture"
                 )
                 color3f outputs:out
-                float2 ui:nodegraph:node:pos = (-91.66671, 179.70107)
-                int ui:nodegraph:node:stackingOrder = 1059
+                float2 ui:nodegraph:node:pos = (-62.2843, 146.20218)
+                int ui:nodegraph:node:stackingOrder = 1083
             }
 
             def Shader "Step_1"
@@ -589,40 +525,6 @@ def Xform "Root"
                 color3f outputs:out
                 float2 ui:nodegraph:node:pos = (521.97284, 130.54642)
                 int ui:nodegraph:node:stackingOrder = 775
-            }
-
-            def NodeGraph "Normals"
-            {
-                float3 outputs:NormalMap_out.connect = </Root/TestSkins/CellShader_D20/Normals/NormalMap.outputs:out>
-                float2 ui:nodegraph:node:pos = (-948.8625, 110.46773)
-                int ui:nodegraph:node:stackingOrder = 1072
-                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (631.75, 208.5)
-
-                def Shader "Image"
-                {
-                    uniform token info:id = "ND_image_vector3"
-                    asset inputs:file = @D20_SteelDark_normal.png@
-                    string inputs:filtertype
-                    string inputs:uaddressmode
-                    string inputs:vaddressmode
-                    float3 outputs:out
-                    float2 ui:nodegraph:node:pos = (108, 208.5)
-                    int ui:nodegraph:node:stackingOrder = 322
-                    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:file"]
-                }
-
-                def Shader "NormalMap"
-                {
-                    uniform token info:id = "ND_normalmap"
-                    float3 inputs:in.connect = </Root/TestSkins/CellShader_D20/Normals/Image.outputs:out>
-                    float3 inputs:normal
-                    float inputs:scale
-                    string inputs:space = "tangent"
-                    float3 inputs:tangent
-                    float3 outputs:out
-                    float2 ui:nodegraph:node:pos = (371.5, 208.5)
-                    int ui:nodegraph:node:stackingOrder = 324
-                }
             }
         }
 
