@@ -4173,6 +4173,7 @@ def Xform "Root"
         active = true
     )
     {
+        reorder nameChildren = ["woodAcajou_tray", "boneStylized_tray", "bronzeArmor_tray", "carbonFiber_tray", "clayTerracotta_tray", "creatureSkinGreen_tray", "fabricWoolJersey_tray", "leatherCalfGrain_tray", "leatheretteDamaged_tray", "leatherGrain_tray", "leatherSofa_tray", "leatherStylized_tray", "leatherStylized_2_tray", "marbleFineWhite_tray", "marblePolished_tray", "marbleVeined_tray", "marbleVerdiAlpi_tray", "metalCyborg_tray", "paintBrushed_tray", "paintRoll_tray", "plasticComposite_tray", "plasticUsed_tray", "plasticUsedSoft_tray", "rubberDry_tray", "rubberRaw_tray", "steelDarkAged_tray", "steelScratched_tray", "stoneTravertine_tray", "stylizedWoodPlain_tray", "terazzoComposite_tray", "woodPlain_tray"]
         def Material "woodAcajou_tray"
         {
             token outputs:mtlx:surface.connect = </Root/TraySkins/woodAcajou_tray/PBRSurface.outputs:out>
@@ -4218,7 +4219,7 @@ def Xform "Root"
                 string inputs:vaddressmode
                 color3f outputs:out
                 float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
-                int ui:nodegraph:node:stackingOrder = 63
+                int ui:nodegraph:node:stackingOrder = 78
             }
 
             def Shader "normal"
@@ -4263,6 +4264,2858 @@ def Xform "Root"
                 float outputs:out
                 float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
                 int ui:nodegraph:node:stackingOrder = 75
+            }
+        }
+
+        def Material "boneStylized_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/boneStylized_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (-116.17813, 237.64055)
+            int ui:nodegraph:node:stackingOrder = 1
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/boneStylized_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/boneStylized_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/boneStylized_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/boneStylized_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/boneStylized_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (277.57547, 138.64284)
+                int ui:nodegraph:node:stackingOrder = 89
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/boneStylized/M_boneStylized_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 78
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/boneStylized/M_boneStylized_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 79
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/boneStylized/M_boneStylized_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 87
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/boneStylized/M_boneStylized_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 82
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/boneStylized/M_boneStylized_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 84
+            }
+        }
+
+        def Material "bronzeArmor_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/bronzeArmor_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (219.79866, 101.92959)
+            int ui:nodegraph:node:stackingOrder = 1
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/bronzeArmor_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/bronzeArmor_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/bronzeArmor_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/bronzeArmor_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/bronzeArmor_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/bronzeArmor/M_bronzeArmor_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 90
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/bronzeArmor/M_bronzeArmor_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 91
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/bronzeArmor/M_bronzeArmor_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 95
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/bronzeArmor/M_bronzeArmor_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 92
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/bronzeArmor/M_bronzeArmor_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 94
+            }
+        }
+
+        def Material "carbonFiber_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/carbonFiber_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (239.79866, 121.92959)
+            int ui:nodegraph:node:stackingOrder = 2
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/carbonFiber_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/carbonFiber_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/carbonFiber_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/carbonFiber_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/carbonFiber_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/carbonFiber/M_carbonFiber_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 96
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/carbonFiber/M_carbonFiber_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 98
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/carbonFiber/M_carbonFiber_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/carbonFiber/M_carbonFiber_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 100
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/carbonFiber/M_carbonFiber_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+        }
+
+        def Material "clayTerracotta_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/clayTerracotta_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (259.79865, 141.9296)
+            int ui:nodegraph:node:stackingOrder = 3
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/clayTerracotta_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/clayTerracotta_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/clayTerracotta_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/clayTerracotta_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/clayTerracotta_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/clayTerracotta/M_clayTerracotta_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 96
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/clayTerracotta/M_clayTerracotta_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 98
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/clayTerracotta/M_clayTerracotta_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/clayTerracotta/M_clayTerracotta_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 100
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/clayTerracotta/M_clayTerracotta_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+        }
+
+        def Material "creatureSkinGreen_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/creatureSkinGreen_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (279.79865, 161.9296)
+            int ui:nodegraph:node:stackingOrder = 4
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/creatureSkinGreen_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/creatureSkinGreen_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/creatureSkinGreen_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/creatureSkinGreen_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/creatureSkinGreen_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/creatureSkinGreen/M_creatureSkinGreen_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 96
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/clayTerracotta/M_clayTerracotta_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 97
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/creatureSkinGreen/M_creatureSkinGreen_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 100
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/clayTerracotta/M_clayTerracotta_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 98
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/creatureSkinGreen/M_creatureSkinGreen_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 99
+            }
+        }
+
+        def Material "fabricWoolJersey_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/fabricWoolJersey_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (299.79865, 181.9296)
+            int ui:nodegraph:node:stackingOrder = 5
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/fabricWoolJersey_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/fabricWoolJersey_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/fabricWoolJersey_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/fabricWoolJersey_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/fabricWoolJersey_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/fabricWoolHerringbone/M_fabricWoolHerringbone_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/fabricWoolHerringbone/M_fabricWoolHerringbone_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/fabricWoolHerringbone/M_fabricWoolHerringbone_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/fabricWoolHerringbone/M_fabricWoolHerringbone_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/fabricWoolJersey/M_fabricWoolJersey_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "leatherCalfGrain_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/leatherCalfGrain_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (319.79865, 201.9296)
+            int ui:nodegraph:node:stackingOrder = 6
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/leatherCalfGrain_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/leatherCalfGrain_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/leatherCalfGrain_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/leatherCalfGrain_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/leatherCalfGrain_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/leatherCalfGrain/M_leatherCalfGrain_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/leatherCalfGrain/M_leatherCalfGrain_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherCalfGrain/M_leatherCalfGrain_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 117
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherCalfGrain/M_leatherCalfGrain_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 115
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherCalfGrain/M_leatherCalfGrain_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 116
+            }
+        }
+
+        def Material "leatheretteDamaged_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/leatheretteDamaged_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (319.79865, 201.9296)
+            int ui:nodegraph:node:stackingOrder = 6
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/leatheretteDamaged_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/leatheretteDamaged_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/leatheretteDamaged_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/leatheretteDamaged_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/leatheretteDamaged_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/leatheretteDamaged/M_leatheretteDamaged_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/leatheretteDamaged/M_leatheretteDamaged_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatheretteDamaged/M_leatheretteDamaged_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatheretteDamaged/M_leatheretteDamaged_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatheretteDamaged/M_leatheretteDamaged_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+        }
+
+        def Material "leatherGrain_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/leatherGrain_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (319.79865, 201.9296)
+            int ui:nodegraph:node:stackingOrder = 6
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/leatherGrain_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/leatherGrain_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/leatherGrain_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/leatherGrain_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/leatherGrain_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/leatherGrain/M_leatherGrain_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/leatherGrain/M_leatherGrain_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherGrain/M_leatherGrain_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 108
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherGrain/M_leatherGrain_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherGrain/M_leatherGrain_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+        }
+
+        def Material "leatherSofa_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/leatherSofa_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (319.79865, 201.9296)
+            int ui:nodegraph:node:stackingOrder = 6
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/leatherSofa_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/leatherSofa_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/leatherSofa_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/leatherSofa_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/leatherSofa_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/leatherSofa/M_leatherSofa_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/leatherSofa/M_leatherSofa_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherSofa/M_leatherSofa_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 110
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherSofa/M_leatherSofa_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 108
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherSofa/M_leatherSofa_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 109
+            }
+        }
+
+        def Material "leatherStylized_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/leatherStylized_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (319.79865, 201.9296)
+            int ui:nodegraph:node:stackingOrder = 6
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/leatherStylized_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/leatherStylized_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/leatherStylized_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/leatherStylized_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/leatherStylized_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/leatherStylized/M_leatherStylized_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/leatherStylized/M_leatherStylized_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherStylized/M_leatherStylized_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherStylized/M_leatherStylized_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherStylized/M_leatherStylized_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+        }
+
+        def Material "leatherStylized_2_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/leatherStylized_2_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (319.79865, 201.9296)
+            int ui:nodegraph:node:stackingOrder = 6
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/leatherStylized_2_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/leatherStylized_2_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/leatherStylized_2_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/leatherStylized_2_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/leatherStylized_2_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/leatherStylized-2/M_leatherStylized-2_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/leatherStylized-2/M_leatherStylized-2_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherStylized-2/M_leatherStylized-2_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherStylized-2/M_leatherStylized-2_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/leatherStylized-2/M_leatherStylized-2_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+        }
+
+        def Material "marbleFineWhite_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/marbleFineWhite_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (319.79865, 201.9296)
+            int ui:nodegraph:node:stackingOrder = 6
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/marbleFineWhite_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/marbleFineWhite_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/marbleFineWhite_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/marbleFineWhite_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/marbleFineWhite_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/marbleFineWhite/M_marbleFineWhite_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/marbleFineWhite/M_marbleFineWhite_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleFineWhite/M_marbleFineWhite_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleFineWhite/M_marbleFineWhite_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleFineWhite/M_marbleFineWhite_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+        }
+
+        def Material "marblePolished_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/marblePolished_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/marblePolished_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/marblePolished_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/marblePolished_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/marblePolished_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/marblePolished_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/marblePolished/M_marblePolished_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/marblePolished/M_marblePolished_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marblePolished/M_marblePolished_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marblePolished/M_marblePolished_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marblePolished/M_marblePolished_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "marbleVeined_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/marbleVeined_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/marbleVeined_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/marbleVeined_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/marbleVeined_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/marbleVeined_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/marbleVeined_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/marbleVeined/M_marbleVeined_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/marbleVeined/M_marbleVeined_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleVeined/M_marbleVeined_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleVeined/M_marbleVeined_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleVeined/M_marbleVeined_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+        }
+
+        def Material "marbleVerdiAlpi_tray"
+        {
+            reorder nameChildren = ["UsdPreviewSurface", "PBRSurface", "baseColor", "normal", "roughness", "metallic", "occlusion", "metalCyborg_tray"]
+            token outputs:mtlx:surface.connect = </Root/TraySkins/marbleVerdiAlpi_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/marbleVerdiAlpi_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/marbleVerdiAlpi_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/marbleVerdiAlpi_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/marbleVerdiAlpi_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/marbleVerdiAlpi_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/marbleVerdiAlpi/M_marbleVerdiAlpi_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/marbleVerdiAlpi/M_marbleVerdiAlpi_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleVerdiAlpi/M_marbleVerdiAlpi_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleVerdiAlpi/M_marbleVerdiAlpi_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/marbleVerdiAlpi/M_marbleVerdiAlpi_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "metalCyborg_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/metalCyborg_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/metalCyborg_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/metalCyborg_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/metalCyborg_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/metalCyborg_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/metalCyborg_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/metalCyborg/M_metalCyborg_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/metalCyborg/M_metalCyborg_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/metalCyborg/M_metalCyborg_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/metalCyborg/M_metalCyborg_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/metalCyborg/M_metalCyborg_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "paintBrushed_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/paintBrushed_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/paintBrushed_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/paintBrushed_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/paintBrushed_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/paintBrushed_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/paintBrushed_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/paintBrushed/M_paintBrushed_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/paintBrushed/M_paintBrushed_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/paintBrushed/M_paintBrushed_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 129
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/paintBrushed/M_paintBrushed_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/paintBrushed/M_paintBrushed_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "paintRoll_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/paintRoll_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/paintRoll_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/paintRoll_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/paintRoll_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/paintRoll_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/paintRoll_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/paintRoll/M_paintRoll_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/paintRoll/M_paintRoll_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/paintRoll/M_paintRoll_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/paintRoll/M_paintRoll_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/paintRoll/M_paintRoll_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+        }
+
+        def Material "plasticComposite_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/plasticComposite_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/plasticComposite_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/plasticComposite_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/plasticComposite_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/plasticComposite_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/plasticComposite_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/plasticComposite/M_plasticComposite_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/plasticComposite/M_plasticComposite_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticComposite/M_plasticComposite_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticComposite/M_plasticComposite_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticComposite/M_plasticComposite_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "plasticUsed_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/plasticUsed_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/plasticUsed_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/plasticUsed_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/plasticUsed_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/plasticUsed_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/plasticUsed_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/plasticUsed/M_plasticUsed_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/plasticUsed/M_plasticUsed_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticUsed/M_plasticUsed_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticUsed/M_plasticUsed_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticUsed/M_plasticUsed_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+        }
+
+        def Material "plasticUsedSoft_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/plasticUsedSoft_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/plasticUsedSoft_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/plasticUsedSoft_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/plasticUsedSoft_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/plasticUsedSoft_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/plasticUsedSoft_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/plasticUsedSoft/M_plasticUsedSoft_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/plasticUsedSoft/M_plasticUsedSoft_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticUsedSoft/M_plasticUsedSoft_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticUsedSoft/M_plasticUsedSoft_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/plasticUsedSoft/M_plasticUsedSoft_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "rubberDry_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/rubberDry_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/rubberDry_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/rubberDry_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/rubberDry_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/rubberDry_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/rubberDry_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/rubberDry/M_rubberDry_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/rubberDry/M_rubberDry_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/rubberDry/M_rubberDry_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/rubberDry/M_rubberDry_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/rubberDry/M_rubberDry_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+        }
+
+        def Material "rubberRaw_tray"
+        {
+            reorder nameChildren = ["UsdPreviewSurface", "PBRSurface", "baseColor", "normal", "roughness", "metallic", "occlusion"]
+            token outputs:mtlx:surface.connect = </Root/TraySkins/rubberRaw_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/rubberRaw_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/rubberRaw_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/rubberRaw_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/rubberRaw_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/rubberRaw_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/rubberRaw/M_rubberRaw_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/rubberRaw/M_rubberRaw_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/rubberRaw/M_rubberRaw_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/rubberRaw/M_rubberRaw_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/rubberRaw/M_rubberRaw_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+        }
+
+        def Material "steelScratched_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/steelScratched_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/steelScratched_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/steelScratched_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/steelScratched_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/steelScratched_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/steelScratched_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/steelScratched/M_steelScratched_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/steelScratched/M_steelScratched_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/steelScratched/M_steelScratched_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/steelScratched/M_steelScratched_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/steelScratched/M_steelScratched_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "stoneTravertine_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/stoneTravertine_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/stoneTravertine_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/stoneTravertine_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/stoneTravertine_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/stoneTravertine_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/stoneTravertine_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/stoneTravertine/M_stoneTravertine_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/stoneTravertine/M_stoneTravertine_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/stoneTravertine/M_stoneTravertine_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 108
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/stoneTravertine/M_stoneTravertine_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/stoneTravertine/M_stoneTravertine_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+        }
+
+        def Material "stylizedWoodPlain_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/stylizedWoodPlain_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/stylizedWoodPlain_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/stylizedWoodPlain_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/stylizedWoodPlain_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/stylizedWoodPlain_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/stylizedWoodPlain_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/stylizedWoodPlain/M_stylizedWoodPlain_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/stylizedWoodPlain/M_stylizedWoodPlain_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/stylizedWoodPlain/M_stylizedWoodPlain_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/stylizedWoodPlain/M_stylizedWoodPlain_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/stylizedWoodPlain/M_stylizedWoodPlain_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+        }
+
+        def Material "terazzoComposite_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/terazzoComposite_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/terazzoComposite_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/terazzoComposite_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/terazzoComposite_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/terazzoComposite_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/terazzoComposite_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/terazzoComposite/M_terazzoComposite_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 107
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/terazzoComposite/M_terazzoComposite_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 108
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/terazzoComposite/M_terazzoComposite_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 111
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/terazzoComposite/M_terazzoComposite_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 109
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/stylizedWoodPlain/M_stylizedWoodPlain_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 110
+            }
+        }
+
+        def Material "woodPlain_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/woodPlain_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/woodPlain_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/woodPlain_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/woodPlain_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/woodPlain_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/woodPlain_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/woodPlain/M_woodPlain_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/woodPlain/M_woodPlain_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/woodPlain/M_woodPlain_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 106
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/woodPlain/M_woodPlain_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/woodPlain/M_woodPlain_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+        }
+
+        def Material "steelDarkAged_tray"
+        {
+            token outputs:mtlx:surface.connect = </Root/TraySkins/steelDarkAged_tray/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = None
+            float2 ui:nodegraph:node:pos = (339.79865, 221.9296)
+            int ui:nodegraph:node:stackingOrder = 7
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.2656, 104.76172)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 24
+
+            def Shader "UsdPreviewSurface" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/TraySkins/steelDarkAged_tray/occlusion.outputs:out>
+                color3f inputs:baseColor.connect = </Root/TraySkins/steelDarkAged_tray/baseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic.connect = </Root/TraySkins/steelDarkAged_tray/metallic.outputs:out>
+                float3 inputs:normal.connect = </Root/TraySkins/steelDarkAged_tray/normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/TraySkins/steelDarkAged_tray/roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "baseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DiceTray_skins/steelDarkAged/M_steelDarkAged_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
+                int ui:nodegraph:node:stackingOrder = 101
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DiceTray_skins/steelDarkAged/M_steelDarkAged_normal.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-518.7391, -27.626886)
+                int ui:nodegraph:node:stackingOrder = 102
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/steelDarkAged/M_steelDarkAged_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
+                int ui:nodegraph:node:stackingOrder = 105
+            }
+
+            def Shader "metallic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/steelDarkAged/M_steelDarkAged_metallic.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
+                int ui:nodegraph:node:stackingOrder = 103
+            }
+
+            def Shader "occlusion"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DiceTray_skins/steelDarkAged/M_steelDarkAged_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
+                int ui:nodegraph:node:stackingOrder = 104
             }
         }
     }
