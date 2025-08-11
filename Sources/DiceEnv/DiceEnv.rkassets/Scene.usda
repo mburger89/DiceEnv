@@ -12,7 +12,7 @@ reorder rootPrims = ["Root", "GoldenDroid_D04"]
 
 def Xform "Root"
 {
-    reorder nameChildren = ["TestSkins", "Dice", "PaintedWorn", "Sapphire", "SteelDarkAged", "Clouds", "BlueEdge", "diceTray_fabricWoolHerringbone", "TraySkins", "DiceCover_glassDirty", "Capsule", "GoldenDroid", "DarkMarble"]
+    reorder nameChildren = ["TestSkins", "Dice", "PaintedWorn", "Sapphire", "SteelDarkAged", "Clouds", "BlueEdge", "TraySkins", "TrayAndCase", "GoldenDroid", "DarkMarble"]
     def Xform "TestSkins" (
         active = true
     )
@@ -1210,11 +1210,21 @@ def Xform "Root"
 
     def Xform "Dice" (
         active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
     )
     {
+        quatf xformOp:orient = (0.7058273, 0, 0.708384, 0)
+        float3 xformOp:translate = (11.662849, 0.9637892, -11.368095)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
         def "D20" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
             references = @D20.usdz@
         )
         {
@@ -1223,13 +1233,16 @@ def Xform "Root"
             )
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (1, 1, 1)
-            float3 xformOp:translate = (0, 0, 0)
+            float3 xformOp:translate = (0, 0, -6.476918)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
         def "D12" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
             references = @D12.usdz@
         )
         {
@@ -1238,13 +1251,16 @@ def Xform "Root"
             )
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (1, 1, 1)
-            float3 xformOp:translate = (0, 0, -2.203426)
+            float3 xformOp:translate = (0, 0, -8.680344)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
         def "D10" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
             references = @D10.usdz@
         )
         {
@@ -1253,13 +1269,16 @@ def Xform "Root"
             )
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (0, -0.018819570541381836, -4.343328475952148)
+            double3 xformOp:translate = (0, -0.018819570541381836, -10.820246696472168)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
         def "D08" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
             references = @D08.usdz@
         )
         {
@@ -1268,13 +1287,16 @@ def Xform "Root"
             )
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (1, 1, 1)
-            float3 xformOp:translate = (0, 0, -6.48288)
+            float3 xformOp:translate = (0, 0, -12.959799)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
         def "D06" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
             references = @D06.usdz@
         )
         {
@@ -1283,13 +1305,16 @@ def Xform "Root"
             )
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (1, 1, 1)
-            float3 xformOp:translate = (0, 0, -8.244607)
+            float3 xformOp:translate = (0, 0, -14.721525)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
         def "D04" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
             references = @D04.usdz@
         )
         {
@@ -1298,7 +1323,7 @@ def Xform "Root"
             )
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-0.11766064167022705, 1.4156103134155273e-7, -10.14943790435791)
+            double3 xformOp:translate = (-0.11766064167022705, 1.4156103134155273e-7, -16.62635612487793)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
@@ -4153,20 +4178,6 @@ def Xform "Root"
                 string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
             }
         }
-    }
-
-    def "diceTray_fabricWoolHerringbone" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        references = @diceTray_fabricWoolHerringbone.usdz@
-    )
-    {
-        rel material:binding = </Root/TraySkins/woodAcajou_tray> (
-            bindMaterialAs = "strongerThanDescendants"
-        )
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.05, 0.05, 0.05)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 
     def Xform "TraySkins" (
@@ -7120,14 +7131,36 @@ def Xform "Root"
         }
     }
 
-    def "DiceCover_glassDirty" (
+    def Xform "TrayAndCase" (
         active = true
-        references = @DiceCover_glassDirty.usdz@
     )
     {
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.05, 0.05, 0.05)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        reorder nameChildren = ["diceTray", "DiceCover"]
+        def "diceTray" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = @diceTray_fabricWoolHerringbone.usdz@
+        )
+        {
+            rel material:binding = </Root/TraySkins/woodAcajou_tray> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            quatf xformOp:orient = (0.99999994, 0, 0, 0)
+            float3 xformOp:scale = (0.049999993, 0.049999993, 0.049999993)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "DiceCover" (
+            active = true
+            references = @DiceCover_glassDirty.usdz@
+        )
+        {
+            quatf xformOp:orient = (0.99999994, 0, 0, 0)
+            float3 xformOp:scale = (0.049999993, 0.049999993, 0.049999993)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
     }
 }
 
