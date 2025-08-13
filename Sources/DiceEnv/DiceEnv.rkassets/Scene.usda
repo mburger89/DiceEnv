@@ -4219,18 +4219,22 @@ def Xform "Root"
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (273.98438, 150.1914)
-                int ui:nodegraph:node:stackingOrder = 28
+                int ui:nodegraph:node:stackingOrder = 89
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:baseColor"]
             }
 
             def Shader "baseColor"
             {
                 uniform token info:id = "ND_image_color3"
-                asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_baseColor.jpg@
+                asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_baseColor.jpg@ (
+                    colorSpace = "srgb_texture"
+                )
                 string inputs:filtertype
                 string inputs:vaddressmode
                 color3f outputs:out
                 float2 ui:nodegraph:node:pos = (-249.05481, -101.99056)
-                int ui:nodegraph:node:stackingOrder = 78
+                int ui:nodegraph:node:stackingOrder = 91
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
             }
 
             def Shader "normal"
@@ -4251,8 +4255,8 @@ def Xform "Root"
                 string inputs:filtertype
                 string inputs:vaddressmode
                 float outputs:out
-                float2 ui:nodegraph:node:pos = (-505.74948, 569.27167)
-                int ui:nodegraph:node:stackingOrder = 61
+                float2 ui:nodegraph:node:pos = (-520.1284, 391.8576)
+                int ui:nodegraph:node:stackingOrder = 80
             }
 
             def Shader "metallic"
@@ -4263,7 +4267,7 @@ def Xform "Root"
                 string inputs:vaddressmode
                 float outputs:out
                 float2 ui:nodegraph:node:pos = (-819.1219, 94.67451)
-                int ui:nodegraph:node:stackingOrder = 59
+                int ui:nodegraph:node:stackingOrder = 94
             }
 
             def Shader "occlusion"
@@ -4273,8 +4277,8 @@ def Xform "Root"
                 string inputs:filtertype
                 string inputs:vaddressmode
                 float outputs:out
-                float2 ui:nodegraph:node:pos = (-179.65105, 384.83847)
-                int ui:nodegraph:node:stackingOrder = 75
+                float2 ui:nodegraph:node:pos = (-247.48308, 319.52206)
+                int ui:nodegraph:node:stackingOrder = 82
             }
         }
 
@@ -7135,25 +7139,98 @@ def Xform "Root"
         active = true
     )
     {
-        reorder nameChildren = ["diceTray", "DiceCover"]
+        reorder nameChildren = ["diceTray", "diceCover"]
         def "diceTray" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
-            references = @diceTray_fabricWoolHerringbone.usdz@
+            references = @diceTray.usdz@
         )
         {
             rel material:binding = </Root/TraySkins/woodAcajou_tray> (
-                bindMaterialAs = "strongerThanDescendants"
+                bindMaterialAs = "weakerThanDescendants"
             )
             quatf xformOp:orient = (0.99999994, 0, 0, 0)
             float3 xformOp:scale = (0.049999993, 0.049999993, 0.049999993)
             float3 xformOp:translate = (0, 0, 0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Materials"
+            {
+                over "M_trayBottom" (
+                    active = false
+                )
+                {
+                    token cullMode = "none" (
+                        allowedTokens = ["unspecified", "none", "front", "back"]
+                    )
+                    token outputs:mtlx:surface.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/PreviewSurface_1.outputs:out>
+                    token outputs:realitykit:vertex
+                    token outputs:surface.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/PreviewSurface.outputs:surface>
+                    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 110.5)
+
+                    over "PreviewSurface" (
+                        active = true
+                    )
+                    {
+                        float3 inputs:diffuseColor = (0, 0, 0)
+                        float3 inputs:diffuseColor.connect = None
+                        delete float inputs:metallic.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/metallicTextureShader.outputs:r>
+                        delete normal3f inputs:normal.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/normalTextureShader.outputs:rgb>
+                        delete float inputs:occlusion.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/occlusionTextureShader.outputs:r>
+                        delete float inputs:roughness.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/roughnessTextureShader.outputs:r>
+                    }
+
+                    def Shader "PreviewSurface_1" (
+                        active = false
+                    )
+                    {
+                        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                        color3f inputs:diffuseColor = (0, 0, 0) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                        float inputs:metallic
+                        float inputs:roughness
+                        token outputs:out
+                        float2 ui:nodegraph:node:pos = (-255, 105)
+                        int ui:nodegraph:node:stackingOrder = 5
+                        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:diffuseColor"]
+                    }
+
+                    def Shader "diffuseColor"
+                    {
+                        uniform token info:id = "UsdUVTexture"
+                        asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_baseColor.jpg@
+                        float2 inputs:st.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/diffuseColor/TexCoordReader.outputs:result>
+                        float3 outputs:rgb
+
+                        def Shader "TexCoordReader"
+                        {
+                            uniform token info:id = "UsdPrimvarReader_float2"
+                            token inputs:varname.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom.inputs:frame:stPrimvarName>
+                            float2 outputs:result
+                        }
+                    }
+                }
+            }
+
+            over "trayBottom" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                over "trayBottom" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/TraySkins/woodAcajou_tray> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+            }
         }
 
-        def "DiceCover" (
+        def "diceCover" (
             active = true
-            references = @DiceCover_glassDirty.usdz@
+            references = @DiceCover.usdz@
         )
         {
             quatf xformOp:orient = (0.99999994, 0, 0, 0)
