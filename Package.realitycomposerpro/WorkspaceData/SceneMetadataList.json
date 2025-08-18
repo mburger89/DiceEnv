@@ -65,6 +65,16 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "TraySkins",
+        "leatherWeathered_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
         "woodAcajou_tray"
       ],
       {
@@ -785,16 +795,6 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "Clear"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "leatherStylized_2_tray"
       ],
       {
         "isExpanded" : true,
