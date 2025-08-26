@@ -1,5 +1,7 @@
 #usda 1.0
 (
+    customLayerData = {
+    }
     defaultPrim = "root"
     doc = "Blender v4.5.1 LTS"
     metersPerUnit = 1
@@ -17,7 +19,6 @@ def Xform "root" (
 {
     reorder nameChildren = ["_materials", "Group", "D08", "D12", "D06", "D100", "D04", "D10", "D20"]
     quatf xformOp:orient = (1, 0, 0, 0)
-    float3 xformOp:scale = (1, 1, 1)
     float3 xformOp:translate = (0, 0, 0)
     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
@@ -297,6 +298,8 @@ def Xform "root" (
             )
             uniform token subdivisionScheme = "none"
             custom string userProperties:blender:data_name = "D08"
+            float3 xformOp:translate = (0.6360338, 0.42285, -1.0268631)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
 
@@ -332,6 +335,8 @@ def Xform "root" (
             )
             uniform token subdivisionScheme = "none"
             custom string userProperties:blender:data_name = "D12"
+            float3 xformOp:translate = (0.35135493, 0.6536811, -1.0426117)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
 
@@ -367,6 +372,8 @@ def Xform "root" (
             )
             uniform token subdivisionScheme = "none"
             custom string userProperties:blender:data_name = "D06"
+            float3 xformOp:translate = (0.6732608, 0.01322031, 1.0882711)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
 
@@ -402,6 +409,8 @@ def Xform "root" (
             )
             uniform token subdivisionScheme = "none"
             custom string userProperties:blender:data_name = "D10.001"
+            float3 xformOp:translate = (-0.6793302, -0.7591521, 0.77458847)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
 
@@ -437,6 +446,8 @@ def Xform "root" (
             )
             uniform token subdivisionScheme = "none"
             custom string userProperties:blender:data_name = "D04"
+            float3 xformOp:translate = (-1.1976111, 0.013220428, 0.4509334)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
 
@@ -472,6 +483,8 @@ def Xform "root" (
             )
             uniform token subdivisionScheme = "none"
             custom string userProperties:blender:data_name = "D10"
+            float3 xformOp:translate = (-1.0110546, 0.66483253, 0.41659966)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
 
@@ -507,6 +520,8 @@ def Xform "root" (
             )
             uniform token subdivisionScheme = "none"
             custom string userProperties:blender:data_name = "D20"
+            float3 xformOp:translate = (0.0000071525565, 1.2797611, -0.0000017285345)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
 }
