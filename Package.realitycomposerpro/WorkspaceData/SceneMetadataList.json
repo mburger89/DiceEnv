@@ -810,26 +810,7 @@
     "objectMetadataList" : [
       [
         "556F4B6E-E2BD-4521-BA44-B6E1A90755DD",
-        "root",
-        "DiceGroup",
-        "D100"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "556F4B6E-E2BD-4521-BA44-B6E1A90755DD",
         "root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "556F4B6E-E2BD-4521-BA44-B6E1A90755DD",
-        "root",
-        "DiceGroup"
       ],
       {
         "isExpanded" : true,
