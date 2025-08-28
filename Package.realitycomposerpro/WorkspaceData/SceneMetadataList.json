@@ -64,6 +64,15 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
+        "PaintedWorn"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
         "rainbow1_D20",
         "nodegraph_2"
       ],

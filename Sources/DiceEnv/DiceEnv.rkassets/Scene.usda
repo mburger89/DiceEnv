@@ -1087,7 +1087,7 @@ def Xform "Root"
                 float inputs:clearcoatRoughness
                 color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
-                float inputs:metallic = 0.9
+                float inputs:metallic = 0
                 float3 inputs:normal.connect = </Root/PaintedWorn/PaintedWorn_D04/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
@@ -1095,7 +1095,7 @@ def Xform "Root"
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
-                int ui:nodegraph:node:stackingOrder = 95
+                int ui:nodegraph:node:stackingOrder = 118
             }
 
             def Shader "BaseColor"
@@ -1163,7 +1163,7 @@ def Xform "Root"
                 float inputs:clearcoatRoughness
                 color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
-                float inputs:metallic = 0.9
+                float inputs:metallic = 0
                 float3 inputs:normal.connect = </Root/PaintedWorn/PaintedWorn_D06/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
@@ -1171,7 +1171,7 @@ def Xform "Root"
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
-                int ui:nodegraph:node:stackingOrder = 95
+                int ui:nodegraph:node:stackingOrder = 114
             }
 
             def Shader "BaseColor"
@@ -1239,7 +1239,7 @@ def Xform "Root"
                 float inputs:clearcoatRoughness
                 color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
-                float inputs:metallic = 0.9
+                float inputs:metallic = 0
                 float3 inputs:normal.connect = </Root/PaintedWorn/PaintedWorn_D08/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
@@ -1247,7 +1247,7 @@ def Xform "Root"
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
-                int ui:nodegraph:node:stackingOrder = 95
+                int ui:nodegraph:node:stackingOrder = 122
             }
 
             def Shader "BaseColor"
@@ -1315,7 +1315,7 @@ def Xform "Root"
                 float inputs:clearcoatRoughness
                 color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
-                float inputs:metallic = 0.9
+                float inputs:metallic = 0
                 float3 inputs:normal.connect = </Root/PaintedWorn/PaintedWorn_D10/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
@@ -1323,7 +1323,7 @@ def Xform "Root"
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
-                int ui:nodegraph:node:stackingOrder = 95
+                int ui:nodegraph:node:stackingOrder = 125
             }
 
             def Shader "BaseColor"
@@ -1391,7 +1391,7 @@ def Xform "Root"
                 float inputs:clearcoatRoughness
                 color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
-                float inputs:metallic = 0.9
+                float inputs:metallic = 0
                 float3 inputs:normal.connect = </Root/PaintedWorn/PaintedWorn_D12/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
@@ -1399,7 +1399,7 @@ def Xform "Root"
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
-                int ui:nodegraph:node:stackingOrder = 95
+                int ui:nodegraph:node:stackingOrder = 130
             }
 
             def Shader "BaseColor"
@@ -1467,7 +1467,7 @@ def Xform "Root"
                 float inputs:clearcoatRoughness
                 color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
-                float inputs:metallic = 0.9
+                float inputs:metallic = 0
                 float3 inputs:normal.connect = </Root/PaintedWorn/PaintedWorn_D20/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
@@ -1475,7 +1475,7 @@ def Xform "Root"
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
-                int ui:nodegraph:node:stackingOrder = 95
+                int ui:nodegraph:node:stackingOrder = 136
             }
 
             def Shader "BaseColor"
