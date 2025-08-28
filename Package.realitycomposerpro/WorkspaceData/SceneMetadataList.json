@@ -324,6 +324,16 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
+        "Clouds",
+        "Clouds_D20"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
         "TraySkins",
         "steelScratched_tray"
       ],
@@ -456,6 +466,14 @@
         "Root",
         "TraySkins",
         "metalCyborg_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root"
       ],
       {
         "isExpanded" : true,

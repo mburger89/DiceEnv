@@ -1,8 +1,7 @@
 {
-  "advancedEditorSelectedIdentifier" : "ProjectBrowser",
+  "advancedEditorSelectedIdentifier" : "ShaderGraphEditorPluginID",
   "openSceneRelativePaths" : [
-    "Scene.usda",
-    "diceCollection.usda"
+    "Scene.usda"
   ],
   "recentIdentifiers" : {
     "3C97A223-C2F4-460A-A016-4DDED1642AFE" : [
@@ -237,6 +236,50 @@
     ],
     "556F4B6E-E2BD-4521-BA44-B6E1A90755DD" : [
       {
+        "date" : 778028000.662139,
+        "title" : "Untitled",
+        "transform" : [
+          0.9987526,
+          -8.0378686e-07,
+          -0.049932126,
+          0,
+          -0.032804023,
+          0.753902,
+          -0.6561674,
+          0,
+          0.037644494,
+          0.6569867,
+          0.7529617,
+          0,
+          0.005956226,
+          0.076285616,
+          0.058732435,
+          1
+        ]
+      },
+      {
+        "date" : 778027998.48377,
+        "title" : "Untitled",
+        "transform" : [
+          0.9963414,
+          -8.040482e-07,
+          0.08546172,
+          0,
+          0.051872924,
+          0.79472953,
+          -0.60474306,
+          0,
+          -0.06791845,
+          0.60696363,
+          0.79182214,
+          0,
+          -0.0014350973,
+          0.07279889,
+          0.063313454,
+          1
+        ]
+      },
+      {
         "date" : 778026277.472744,
         "title" : "Untitled",
         "transform" : [
@@ -411,55 +454,11 @@
           0.096653976,
           1
         ]
-      },
-      {
-        "date" : 778026129.11255,
-        "title" : "Untitled",
-        "transform" : [
-          0.99843013,
-          -8.069378e-07,
-          -0.0560106,
-          0,
-          -0.026791925,
-          0.87816817,
-          -0.4776012,
-          0,
-          0.049187068,
-          0.47835192,
-          0.87678957,
-          0,
-          0.012381878,
-          0.06444125,
-          0.0726211,
-          1
-        ]
-      },
-      {
-        "date" : 778026124.162083,
-        "title" : "Untitled",
-        "transform" : [
-          0.9983582,
-          -8.0992356e-07,
-          -0.057278886,
-          0,
-          -0.0052666506,
-          0.99576235,
-          -0.09181331,
-          0,
-          0.057036187,
-          0.09196412,
-          0.99412745,
-          0,
-          0.013592195,
-          0.030229703,
-          0.09209358,
-          1
-        ]
       }
     ]
   },
   "sceneViewportBackgroundColors" : {
 
   },
-  "selectedSceneRelativePath" : "diceCollection.usda"
+  "selectedSceneRelativePath" : "Scene.usda"
 }
