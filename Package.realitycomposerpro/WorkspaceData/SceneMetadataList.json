@@ -184,6 +184,15 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
+        "TrayAndCase"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
         "PaintedWorn",
         "PaintedWorn_D12"
       ],
@@ -832,6 +841,29 @@
       ],
       {
         "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "B1F7D6D4-9384-4A14-A878-702B3FE490BA" : {
+    "objectMetadataList" : [
+      [
+        "B1F7D6D4-9384-4A14-A878-702B3FE490BA",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "B1F7D6D4-9384-4A14-A878-702B3FE490BA",
+        "Root",
+        "diceTray",
+        "trayCover"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : false,
         "isLocked" : false
       }
     ]

@@ -6337,100 +6337,180 @@ def Xform "Root"
         def "diceTray" (
             active = true
             prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (-1.5707964, 0, 0)
+            }
             references = @diceTray.usdz@
         )
         {
             rel material:binding = </Root/TraySkins/woodAcajou_tray> (
                 bindMaterialAs = "weakerThanDescendants"
             )
-            quatf xformOp:orient = (0.99999994, 0, 0, 0)
-            float3 xformOp:scale = (0.049999993, 0.049999993, 0.049999993)
+            quatf xformOp:orient = (0.70710677, -0.7071067, 0, 0)
+            float3 xformOp:scale = (4.9999995, 4.9999995, 4.9999995)
             float3 xformOp:translate = (0, 0, 0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-            over "Materials"
-            {
-                over "M_trayBottom" (
-                    active = false
-                )
-                {
-                    token cullMode = "none" (
-                        allowedTokens = ["unspecified", "none", "front", "back"]
-                    )
-                    token outputs:mtlx:surface.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/PreviewSurface_1.outputs:out>
-                    token outputs:realitykit:vertex
-                    token outputs:surface.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/PreviewSurface.outputs:surface>
-                    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 110.5)
-
-                    over "PreviewSurface" (
-                        active = true
-                    )
-                    {
-                        float3 inputs:diffuseColor = (0, 0, 0)
-                        float3 inputs:diffuseColor.connect = None
-                        delete float inputs:metallic.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/metallicTextureShader.outputs:r>
-                        delete normal3f inputs:normal.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/normalTextureShader.outputs:rgb>
-                        delete float inputs:occlusion.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/occlusionTextureShader.outputs:r>
-                        delete float inputs:roughness.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/roughnessTextureShader.outputs:r>
-                    }
-
-                    def Shader "PreviewSurface_1" (
-                        active = false
-                    )
-                    {
-                        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
-                        color3f inputs:diffuseColor = (0, 0, 0) (
-                            colorSpace = "srgb_displayp3"
-                        )
-                        float inputs:metallic
-                        float inputs:roughness
-                        token outputs:out
-                        float2 ui:nodegraph:node:pos = (-255, 105)
-                        int ui:nodegraph:node:stackingOrder = 5
-                        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:diffuseColor"]
-                    }
-
-                    def Shader "diffuseColor"
-                    {
-                        uniform token info:id = "UsdUVTexture"
-                        asset inputs:file = @DiceTray_skins/woodAcajou/M_woodAcajou_baseColor.jpg@
-                        float2 inputs:st.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom/diffuseColor/TexCoordReader.outputs:result>
-                        float3 outputs:rgb
-
-                        def Shader "TexCoordReader"
-                        {
-                            uniform token info:id = "UsdPrimvarReader_float2"
-                            token inputs:varname.connect = </Root/TrayAndCase/diceTray/Materials/M_trayBottom.inputs:frame:stPrimvarName>
-                            float2 outputs:result
-                        }
-                    }
-                }
-            }
-
-            over "trayBottom" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                over "trayBottom" (
-                    prepend apiSchemas = ["MaterialBindingAPI"]
-                )
-                {
-                    rel material:binding = None (
-                        bindMaterialAs = "weakerThanDescendants"
-                    )
-                }
-            }
         }
+    }
 
-        def "diceCover" (
-            active = true
-            references = @DiceCover.usdz@
-        )
+    def Xform "Clouds" (
+        active = true
+    )
+    {
+        def Material "Clouds_D20"
         {
-            quatf xformOp:orient = (0.99999994, 0, 0, 0)
-            float3 xformOp:scale = (0.049999993, 0.049999993, 0.049999993)
-            float3 xformOp:translate = (0, 0, 0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            token outputs:mtlx:surface.connect = </Root/Clouds/Clouds_D20/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (335.25, 100.5)
+
+            def Shader "Fractal3D"
+            {
+                uniform token info:id = "ND_fractal3d_float"
+                float inputs:diminish
+                float inputs:lacunarity = 3
+                int inputs:octaves = 6
+                float3 inputs:position.connect = </Root/Clouds/Clouds_D20/Add.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-710.70154, -37.023285)
+                int ui:nodegraph:node:stackingOrder = 222
+            }
+
+            def Shader "Mix"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg = (0.0722022, 0.6603385, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:fg = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                float inputs:mix = 0.5
+                float inputs:mix.connect = </Root/Clouds/Clouds_D20/Abs.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-231.51562, -77.74219)
+                int ui:nodegraph:node:stackingOrder = 230
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "Abs"
+            {
+                uniform token info:id = "ND_absval_float"
+                float inputs:in.connect = </Root/Clouds/Clouds_D20/Multiply_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-376.0547, -46.910156)
+                int ui:nodegraph:node:stackingOrder = 228
+            }
+
+            def Shader "Time"
+            {
+                uniform token info:id = "ND_time_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1255.6953, 11.64403)
+                int ui:nodegraph:node:stackingOrder = 133
+            }
+
+            def Shader "Position"
+            {
+                uniform token info:id = "ND_position_vector3"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-1253.7434, -102.43755)
+                int ui:nodegraph:node:stackingOrder = 131
+            }
+
+            def Shader "Add"
+            {
+                uniform token info:id = "ND_add_vector3FA"
+                float3 inputs:in1.connect = </Root/Clouds/Clouds_D20/Position.outputs:out>
+                float inputs:in2.connect = </Root/Clouds/Clouds_D20/Multiply.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-940.29297, 11.550781)
+                int ui:nodegraph:node:stackingOrder = 72
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/Clouds/Clouds_D20/Time.outputs:out>
+                float inputs:in2 = 0.1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1131.748, 22.534328)
+                int ui:nodegraph:node:stackingOrder = 150
+            }
+
+            def Shader "Fractal3D_1"
+            {
+                uniform token info:id = "ND_fractal3d_float"
+                float inputs:diminish
+                float inputs:lacunarity = 3
+                int inputs:octaves = 6
+                float3 inputs:position.connect = </Root/Clouds/Clouds_D20/Add_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-712.1822, -242.56276)
+                int ui:nodegraph:node:stackingOrder = 222
+            }
+
+            def Shader "Multiply_1"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/Clouds/Clouds_D20/Fractal3D_1.outputs:out>
+                float inputs:in2.connect = </Root/Clouds/Clouds_D20/Fractal3D.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-492.4375, -46.96875)
+                int ui:nodegraph:node:stackingOrder = 137
+            }
+
+            def Shader "Multiply_2"
+            {
+                uniform token info:id = "ND_multiply_vector3"
+                float3 inputs:in1.connect = </Root/Clouds/Clouds_D20/Position.outputs:out>
+                float3 inputs:in2.connect = None
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-1012.85156, -166.3164)
+                int ui:nodegraph:node:stackingOrder = 116
+            }
+
+            def Shader "Add_1"
+            {
+                uniform token info:id = "ND_add_vector3FA"
+                float3 inputs:in1.connect = </Root/Clouds/Clouds_D20/Multiply_2.outputs:out>
+                float inputs:in2.connect = </Root/Clouds/Clouds_D20/Multiply_3.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-896.71094, -156.64453)
+                int ui:nodegraph:node:stackingOrder = 123
+            }
+
+            def Shader "Multiply_3"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/Clouds/Clouds_D20/Multiply.outputs:out>
+                float inputs:in2 = 0.5
+                float inputs:in2.connect = None
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1010.3113, -81.39335)
+                int ui:nodegraph:node:stackingOrder = 224
+            }
+
+            def Shader "Add_2"
+            {
+                uniform token info:id = "ND_add_color3FA"
+                color3f inputs:in1.connect = </Root/Clouds/Clouds_D20/Mix.outputs:out>
+                float inputs:in2
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-94.44429, 62.730732)
+                int ui:nodegraph:node:stackingOrder = 259
+            }
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                color3f inputs:baseColor.connect = </Root/Clouds/Clouds_D20/Add_2.outputs:out>
+                float3 inputs:clearcoatNormal
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (82.38587, 157.18704)
+                int ui:nodegraph:node:stackingOrder = 252
+            }
         }
     }
 }
