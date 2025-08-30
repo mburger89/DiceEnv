@@ -485,6 +485,7 @@ def Xform "Root"
         }
     )
     {
+        reorder nameChildren = ["D20", "D12", "D10", "D08", "D06", "D04", "D100"]
         quatf xformOp:orient = (0.7058273, 0, 0.708384, 0)
         float3 xformOp:translate = (11.662849, 0.9637892, -11.368095)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
@@ -594,6 +595,26 @@ def Xform "Root"
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (1, 1, 1)
             double3 xformOp:translate = (-0.11766064167022705, 1.4156103134155273e-7, -16.62635612487793)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "D100" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
+            references = @D10.usdz@
+        )
+        {
+            rel material:binding = </Root/Sapphire/Sapphire_D10> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            float2 ui:nodegraph:node:pos = (-362.77792, -68.96094)
+            int ui:nodegraph:node:stackingOrder = 1
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.66748046875, -0.018809378147125244, -10.820256233215332)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }
@@ -1528,7 +1549,7 @@ def Xform "Root"
         active = true
     )
     {
-        reorder nameChildren = ["Sapphire_D04", "Sapphire_D06", "Sapphire_D08", "Sapphire_D10", "Sapphire_D12", "Sapphire_D20"]
+        reorder nameChildren = ["Sapphire_D04", "Sapphire_D06", "Sapphire_D08", "Sapphire_D100", "Sapphire_D12", "Sapphire_D20", "Sapphire_D10"]
         def Material "Sapphire_D04"
         {
             reorder nameChildren = ["PBRSurface", "Image", "Image_1", "Image_2", "Image_3", "Clouds_D20"]
@@ -1793,10 +1814,10 @@ def Xform "Root"
             }
         }
 
-        def Material "Sapphire_D10"
+        def Material "Sapphire_D100"
         {
             reorder nameChildren = ["PBRSurface", "Image", "Image_1", "Image_2", "Image_3", "Clouds_D20"]
-            token outputs:mtlx:surface.connect = </Root/Sapphire/Sapphire_D10/PBRSurface.outputs:out>
+            token outputs:mtlx:surface.connect = </Root/Sapphire/Sapphire_D100/PBRSurface.outputs:out>
             token outputs:realitykit:vertex
             float2 ui:nodegraph:node:pos = (-52.73111, 232.3523)
             int ui:nodegraph:node:stackingOrder = 11
@@ -1806,19 +1827,19 @@ def Xform "Root"
             def Shader "PBRSurface"
             {
                 uniform token info:id = "ND_realitykit_pbr_surfaceshader"
-                float inputs:ambientOcclusion.connect = </Root/Sapphire/Sapphire_D10/AO.outputs:out>
-                color3f inputs:baseColor.connect = </Root/Sapphire/Sapphire_D10/BaseColor.outputs:out>
+                float inputs:ambientOcclusion.connect = </Root/Sapphire/Sapphire_D100/AO.outputs:out>
+                color3f inputs:baseColor.connect = </Root/Sapphire/Sapphire_D100/BaseColor.outputs:out>
                 float inputs:clearcoat
                 float3 inputs:clearcoatNormal
                 float inputs:clearcoatRoughness
                 color3f inputs:emissiveColor
                 bool inputs:hasPremultipliedAlpha
                 float inputs:metallic = 0.9
-                float inputs:metallic.connect = </Root/Sapphire/Sapphire_D10/Metalness.outputs:out>
-                float3 inputs:normal.connect = </Root/Sapphire/Sapphire_D10/Normal.outputs:out>
+                float inputs:metallic.connect = </Root/Sapphire/Sapphire_D100/Metalness.outputs:out>
+                float3 inputs:normal.connect = </Root/Sapphire/Sapphire_D100/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
-                float inputs:roughness.connect = </Root/Sapphire/Sapphire_D10/Roughness.outputs:out>
+                float inputs:roughness.connect = </Root/Sapphire/Sapphire_D100/Roughness.outputs:out>
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
@@ -2056,6 +2077,94 @@ def Xform "Root"
                 int ui:nodegraph:node:stackingOrder = 141
             }
         }
+
+        def Material "Sapphire_D10"
+        {
+            reorder nameChildren = ["PBRSurface", "Image", "Image_1", "Image_2", "Image_3", "Clouds_D20"]
+            token outputs:mtlx:surface.connect = </Root/Sapphire/Sapphire_D10/PBRSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:node:pos = (-32.73111, 252.3523)
+            int ui:nodegraph:node:stackingOrder = 12
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (273.74237, 169.82535)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 62
+
+            def Shader "PBRSurface"
+            {
+                uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                float inputs:ambientOcclusion.connect = </Root/Sapphire/Sapphire_D10/AO.outputs:out>
+                color3f inputs:baseColor.connect = </Root/Sapphire/Sapphire_D10/BaseColor.outputs:out>
+                float inputs:clearcoat
+                float3 inputs:clearcoatNormal
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor
+                bool inputs:hasPremultipliedAlpha
+                float inputs:metallic = 0.9
+                float inputs:metallic.connect = </Root/Sapphire/Sapphire_D10/Metalness.outputs:out>
+                float3 inputs:normal.connect = </Root/Sapphire/Sapphire_D10/Normal.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/Sapphire/Sapphire_D10/Roughness.outputs:out>
+                float inputs:specular
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
+                int ui:nodegraph:node:stackingOrder = 95
+            }
+
+            def Shader "BaseColor"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Sapphire/D100_Sapphire/D10_single_Sapphire_baseColor.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-616.62946, -477.75143)
+                int ui:nodegraph:node:stackingOrder = 135
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+            }
+
+            def Shader "Normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Sapphire/D100_Sapphire/D10_single_Sapphire_normal.png@
+                string inputs:filtertype
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-352.4828, -204.79681)
+                int ui:nodegraph:node:stackingOrder = 136
+            }
+
+            def Shader "Roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Sapphire/D100_Sapphire/D10_single_Sapphire_roughness.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-617.57697, -51.924557)
+                int ui:nodegraph:node:stackingOrder = 138
+            }
+
+            def Shader "Metalness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Sapphire/D100_Sapphire/D10_single_Sapphire_metallic.jpg@
+                string inputs:filtertype
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-616.48145, 372.7364)
+                int ui:nodegraph:node:stackingOrder = 141
+            }
+
+            def Shader "AO"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Sapphire/D100_Sapphire/D10_single_Sapphire_occlusion.jpg@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-347.30594, 226.72006)
+                int ui:nodegraph:node:stackingOrder = 140
+            }
+        }
     }
 
     def Xform "SteelDarkAged" (
@@ -2088,11 +2197,13 @@ def Xform "Root"
                 float3 inputs:normal.connect = </Root/SteelDarkAged/SteelDarkAged_D04/Normal.outputs:out>
                 float inputs:opacity
                 float inputs:opacityThreshold
-                float inputs:roughness.connect = </Root/SteelDarkAged/SteelDarkAged_D04/Roughness.outputs:out>
+                float inputs:roughness = 0.3
+                float inputs:roughness.connect = None
                 float inputs:specular
                 token outputs:out
                 float2 ui:nodegraph:node:pos = (2.6960206, 41.030357)
-                int ui:nodegraph:node:stackingOrder = 116
+                int ui:nodegraph:node:stackingOrder = 161
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
             }
 
             def Shader "Metalness"
@@ -2112,8 +2223,8 @@ def Xform "Root"
                 string inputs:filtertype
                 string inputs:vaddressmode
                 color3f outputs:out
-                float2 ui:nodegraph:node:pos = (-619.8268, 367.86023)
-                int ui:nodegraph:node:stackingOrder = 129
+                float2 ui:nodegraph:node:pos = (-591.6595, 220.39871)
+                int ui:nodegraph:node:stackingOrder = 167
             }
 
             def Shader "AO"
@@ -2121,6 +2232,7 @@ def Xform "Root"
                 uniform token info:id = "ND_image_float"
                 asset inputs:file = @SteelDarkAgedPink/D04_SteelDarkAgedPink_damaged/D04_SteelDarkAged_occlusion.jpg@
                 string inputs:filtertype
+                string inputs:uaddressmode
                 string inputs:vaddressmode
                 float outputs:out
                 float2 ui:nodegraph:node:pos = (-347.30594, 226.72006)
@@ -2132,23 +2244,11 @@ def Xform "Root"
                 uniform token info:id = "ND_image_vector3"
                 asset inputs:file = @SteelDarkAgedPink/D04_SteelDarkAgedPink_damaged/D04_SteelDarkAged_normal.png@
                 string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
                 float3 outputs:out
                 float2 ui:nodegraph:node:pos = (-352.4828, -204.79681)
                 int ui:nodegraph:node:stackingOrder = 133
-            }
-
-            def Shader "Roughness"
-            {
-                uniform token info:id = "ND_image_float"
-                float inputs:default
-                asset inputs:file = @SteelDarkAgedPink/D04_SteelDarkAgedPink_damaged/D04_SteelDarkAged_roughness.jpg@
-                string inputs:filtertype
-                float2 inputs:texcoord
-                string inputs:uaddressmode
-                string inputs:vaddressmode
-                float outputs:out
-                float2 ui:nodegraph:node:pos = (-617.57697, -51.924557)
-                int ui:nodegraph:node:stackingOrder = 134
             }
 
             def Shader "BaseColor"
@@ -2158,8 +2258,8 @@ def Xform "Root"
                 string inputs:filtertype
                 string inputs:vaddressmode
                 color3f outputs:out
-                float2 ui:nodegraph:node:pos = (-618.0699, -468.41434)
-                int ui:nodegraph:node:stackingOrder = 135
+                float2 ui:nodegraph:node:pos = (-592.28485, -203.1374)
+                int ui:nodegraph:node:stackingOrder = 165
                 string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
             }
         }

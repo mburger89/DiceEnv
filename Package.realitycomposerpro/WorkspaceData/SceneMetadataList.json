@@ -44,27 +44,8 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "SteelDarkAged",
-        "SteelDarkAged_D04"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
         "DarkMarble",
         "DarkMarble_D20"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "PaintedWorn"
       ],
       {
         "isExpanded" : true,
@@ -193,7 +174,8 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "TrayAndCase"
+        "Dice",
+        "D10"
       ],
       {
         "isExpanded" : true,
@@ -500,6 +482,15 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
+        "Dice"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
         "SteelDarkAged",
         "SteelDarkAged_D06"
       ],
@@ -733,8 +724,8 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "Sapphire",
-        "Sapphire_D10"
+        "rainbow1_D20",
+        "nodegraph"
       ],
       {
         "isExpanded" : true,
@@ -755,16 +746,6 @@
         "Root",
         "BlueEdge",
         "BlueEdge_D04"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "rainbow1_D20",
-        "nodegraph"
       ],
       {
         "isExpanded" : true,
@@ -858,9 +839,12 @@
     "objectMetadataList" : [
       [
         "B1F7D6D4-9384-4A14-A878-702B3FE490BA",
-        "Root"
+        "Root",
+        "DiceCover",
+        "trayCover"
       ],
       {
+        "disallowsFraming" : true,
         "isExpanded" : true,
         "isLocked" : false
       },
@@ -873,6 +857,14 @@
       {
         "disallowsFraming" : true,
         "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "B1F7D6D4-9384-4A14-A878-702B3FE490BA",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
         "isLocked" : false
       }
     ]
