@@ -4,18 +4,8 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "TraySkins",
-        "leatherGrain_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "SteelDarkAged",
-        "SteelDarkAged_D12"
+        "rainbow1_D20",
+        "nodegraph_1"
       ],
       {
         "isExpanded" : true,
@@ -25,7 +15,7 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "TraySkins",
-        "carbonFiber_tray"
+        "marblePolished_tray"
       ],
       {
         "isExpanded" : true,
@@ -33,9 +23,7 @@
       },
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "PaintedWorn",
-        "PaintedWorn_D04"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -54,48 +42,58 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "rainbow1_D20",
-        "nodegraph_2"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "paintRoll_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "fabricWoolHerringbone_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "boneStylized_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
         "TraySkins",
         "stylizedWoodPlain_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "GoldenDroid",
+        "GoldenDroid_D06"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "fabricWoolJersey_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "DarkMarble",
+        "DarkMarble_D04"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "plasticUsed_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "DarkMarble",
+        "DarkMarble_D08"
       ],
       {
         "isExpanded" : true,
@@ -115,47 +113,7 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "GoldenDroid",
-        "GoldenDroid_D10"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "rainbow1_D20",
-        "nodegraph_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "BlueEdge",
-        "BlueEdge_D10"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "BlueEdge",
-        "BlueEdge_D08"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "GoldenDroid",
-        "GoldenDroid_D12"
+        "GoldenDroid_D20"
       ],
       {
         "isExpanded" : true,
@@ -165,7 +123,7 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "TraySkins",
-        "stoneTravertine_tray"
+        "leatherWeathered_tray"
       ],
       {
         "isExpanded" : true,
@@ -176,6 +134,46 @@
         "Root",
         "Dice",
         "D10"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "DarkMarble",
+        "DarkMarble_D06"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "marbleVeined_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "paintBrushed_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "BlueEdge",
+        "BlueEdge_D08"
       ],
       {
         "isExpanded" : true,
@@ -195,97 +193,7 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "BlueEdge",
-        "BlueEdge_D06"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Sapphire",
-        "Sapphire_D06"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "BlueEdge",
-        "BlueEdge_D20"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "GoldenDroid",
-        "GoldenDroid_D08"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "leatherSofa_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "SteelDarkAged",
-        "SteelDarkAged_D20"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "rainbow_1",
-        "nodegraph_2"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "plasticUsedSoft_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "leatherCalfGrain_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "GoldenDroid",
-        "GoldenDroid_D04"
+        "BlueEdge_D12"
       ],
       {
         "isExpanded" : true,
@@ -305,47 +213,7 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "TraySkins",
-        "terazzoComposite_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "SteelDarkAged",
-        "SteelDarkAged_D08"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Clouds",
-        "Clouds_D20"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "steelScratched_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Sapphire",
-        "Sapphire_D20"
+        "rubberDry_tray"
       ],
       {
         "isExpanded" : true,
@@ -356,222 +224,6 @@
         "Root",
         "PaintedWorn",
         "PaintedWorn_D20"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "DarkMarble",
-        "DarkMarble_D08"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "BlueEdge",
-        "BlueEdge_D12"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "DarkMarble",
-        "DarkMarble_D12"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "rubberDry_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "clayTerracotta_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "PaintedWorn",
-        "PaintedWorn_D08"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Sapphire",
-        "Sapphire_D12"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "rainbow_1",
-        "nodegraph_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "PaintedWorn",
-        "PaintedWorn_D06"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "plasticComposite_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "metalCyborg_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Dice"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "SteelDarkAged",
-        "SteelDarkAged_D06"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Sapphire",
-        "Sapphire_D04"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Clear"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "SteelDarkAged",
-        "SteelDarkAged_D10"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "plasticUsed_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "woodAcajou_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "Sapphire",
-        "Sapphire_D08"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "marbleVerdiAlpi_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "marbleVeined_tray"
       ],
       {
         "isExpanded" : true,
@@ -591,7 +243,156 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "TraySkins",
-        "woodPlain_tray"
+        "steelDarkAged_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Sapphire",
+        "Sapphire_D04"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "fabricWoolHerringbone_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Dice"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "rainbow_1",
+        "nodegraph_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "PaintedWorn",
+        "PaintedWorn_D04"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "BlueEdge",
+        "BlueEdge_D10"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "paintRoll_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Clouds",
+        "Clouds_D20"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "creatureSkinGreen_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "steelScratched_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "PaintedWorn",
+        "PaintedWorn_D08"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "leatherSofa_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Sapphire",
+        "Sapphire_D20"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "SteelDarkAged",
+        "SteelDarkAged_D12"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "DarkMarble",
+        "DarkMarble_D12"
       ],
       {
         "isExpanded" : true,
@@ -601,7 +402,107 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "GoldenDroid",
-        "GoldenDroid_D06"
+        "GoldenDroid_D12"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Sapphire",
+        "Sapphire_D06"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Sapphire",
+        "Sapphire_D08"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "woodPlain_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "woodAcajou_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "leatherStylized_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "bronzeArmor_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Sapphire",
+        "Sapphire_D12"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "boneStylized_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "clayTerracotta_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "SteelDarkAged",
+        "SteelDarkAged_D06"
       ],
       {
         "isExpanded" : true,
@@ -632,8 +533,8 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "DarkMarble",
-        "DarkMarble_D06"
+        "TraySkins",
+        "rubberRaw_tray"
       ],
       {
         "isExpanded" : true,
@@ -643,7 +544,236 @@
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
         "TraySkins",
-        "fabricWoolJersey_tray"
+        "metalCyborg_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "rainbow1_D20",
+        "nodegraph_2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "stoneTravertine_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "marbleVerdiAlpi_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "terazzoComposite_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "plasticComposite_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "leatherGrain_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "SteelDarkAged",
+        "SteelDarkAged_D08"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "SteelDarkAged",
+        "SteelDarkAged_D20"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "leatheretteDamaged_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "GoldenDroid",
+        "GoldenDroid_D08"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "carbonFiber_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "GoldenDroid",
+        "GoldenDroid_D04"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "rainbow_1",
+        "nodegraph_2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "BlueEdge",
+        "BlueEdge_D20"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "rainbow",
+        "ColorMap"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "rainbow_D20",
+        "ColorMap"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "BlueEdge",
+        "BlueEdge_D06"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "plasticUsedSoft_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "Clear"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "SteelDarkAged",
+        "SteelDarkAged_D10"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "DarkMarble",
+        "DarkMarble_D10"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "TraySkins",
+        "leatherCalfGrain_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "rainbow1_D20",
+        "nodegraph"
       ],
       {
         "isExpanded" : true,
@@ -664,86 +794,6 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "TraySkins",
-        "leatherStylized_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "rainbow",
-        "ColorMap"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "DarkMarble",
-        "DarkMarble_D10"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "steelDarkAged_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "bronzeArmor_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "rainbow_D20",
-        "ColorMap"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "rainbow1_D20",
-        "nodegraph"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "rubberRaw_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
         "BlueEdge",
         "BlueEdge_D04"
       ],
@@ -754,48 +804,8 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "TraySkins",
-        "marblePolished_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "leatheretteDamaged_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "creatureSkinGreen_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "DarkMarble",
-        "DarkMarble_D04"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
         "GoldenDroid",
-        "GoldenDroid_D20"
+        "GoldenDroid_D10"
       ],
       {
         "isExpanded" : true,
@@ -804,18 +814,8 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
-        "TraySkins",
-        "leatherWeathered_tray"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
-        "Root",
-        "TraySkins",
-        "paintBrushed_tray"
+        "PaintedWorn",
+        "PaintedWorn_D06"
       ],
       {
         "isExpanded" : true,
@@ -837,6 +837,15 @@
   },
   "B1F7D6D4-9384-4A14-A878-702B3FE490BA" : {
     "objectMetadataList" : [
+      [
+        "B1F7D6D4-9384-4A14-A878-702B3FE490BA",
+        "Root",
+        "CoverGlass"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
       [
         "B1F7D6D4-9384-4A14-A878-702B3FE490BA",
         "Root",
