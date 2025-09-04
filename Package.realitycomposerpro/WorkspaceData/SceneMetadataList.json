@@ -1,4 +1,16 @@
 {
+  "0910D98E-F986-45B2-B917-99FE2FEDB98F" : {
+    "objectMetadataList" : [
+      [
+        "0910D98E-F986-45B2-B917-99FE2FEDB98F",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "3C97A223-C2F4-460A-A016-4DDED1642AFE" : {
     "objectMetadataList" : [
       [
@@ -291,6 +303,15 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
+        "trayCover"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
         "PaintedWorn",
         "PaintedWorn_D04"
       ],
@@ -543,8 +564,27 @@
       [
         "3C97A223-C2F4-460A-A016-4DDED1642AFE",
         "Root",
+        "TraySkins"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
         "TraySkins",
         "metalCyborg_tray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "trayBottom_V3",
+        "Materials"
       ],
       {
         "isExpanded" : true,
@@ -625,6 +665,27 @@
         "Root",
         "SteelDarkAged",
         "SteelDarkAged_D20"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "diceTray",
+        "diceTray"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C97A223-C2F4-460A-A016-4DDED1642AFE",
+        "Root",
+        "diceTray",
+        "diceTray",
+        "trayBottom"
       ],
       {
         "isExpanded" : true,
